@@ -27,4 +27,4 @@ dist-ssr
 index.html
 package-lock.json
 package.json
-vite.config.json
+vite.config.js
