@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import "./Home.css";
-import axios from "axios";
+import blogFetch from "../axios/config";
 import { Link } from "react-router-dom";
 
 const Home = () => {
@@ -8,7 +8,7 @@ const Home = () => {
 
   const getPosts = async () => {
     try {
-      const res = await axios.get("https://jsonplaceholder.typicode.com/posts");
+      const res = await blogFetch.get("/posts");
       const data = res.data;
 
       setPosts(data);
