@@ -17,6 +17,9 @@ const Navbar = () => {
             Novo post
           </Link>
         </li>
+        <li>
+          <Link to={"/admin"}>Gerenciar</Link>
+        </li>
       </ul>
     </nav>
   );
