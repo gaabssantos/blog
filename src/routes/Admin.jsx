@@ -24,7 +24,7 @@ const Admin = () => {
     await blogFetch.delete(`/posts/${id}`);
 
     const filteredPosts = posts.filter((post) => post.id !== id);
-    console.log(filteredPosts)
+    console.log(filteredPosts);
     setPosts(filteredPosts);
   };
 
@@ -42,7 +42,9 @@ const Admin = () => {
           <div className="post" key={post.id}>
             <h2>{post.title}</h2>
             <div className="actions">
-              <Link className="btn edit-btn">Editar</Link>
+              <Link to={`/posts/edit/${post.id}`} className="btn edit-btn">
+                Editar
+              </Link>
               <button
                 className="btn delete-btn"
                 onClick={() => deletePost(post.id)}
